@@ -1,0 +1,16 @@
+figure (1);
+strength = [49 52 37 29 14 17];
+Labels = {'ICA', 'GLM', 'Seed-based','PDC', 'DTF', 'DCM'};
+subplot(1,4,1);
+pie(strength);
+title('Pie');
+subplot(1,4,2);
+pie(strength,[0 1 0 0 0 1],Labels);
+title('Exploded Pie');
+subplot(1,4,3);
+pie3(strength,[1 0 1 0 1 0],Labels);
+title('Labeled Pie');
+subplot(1,4,4);
+rgbImage = imread("Jerry.jpg");
+imshow(rgbImage);
+saveas(gcf,'test.jpg');
