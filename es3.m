@@ -1,4 +1,4 @@
-figure(1);
+    figure(1);
 x = 1:20;
 y = magic(20);
 y = y(1,:);
