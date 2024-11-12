@@ -1,9 +1,14 @@
-% A. Thread breaking strength data for 20 tests
-y = [92,94,93,96,93,94,95,96,91,93,95,95,95,92,93,94,91,94,92,93];
-x = 91:96; % The six possible outcomes are: 91,92,93,94,95,96.
+
+%%grafico2 -- Punto B
 subplot(2,2,1);
-hist(y,x);
-axis([90 97 0 6]);
+data = 91:96;
+freq = [13 15 22 19 17 14];
+y1 = [];
+for i = 1:(length(freq))
+    y1 = [y1,data(i)*ones(1,freq(i))];
+end
+hist(y1,data);
+axis([90 97 0 23]);
 ylabel('Absolute Frequency');
 xlabel('Thread Strength (N)');
 title('Absolute Frequency Histogram for 20 Tests');
