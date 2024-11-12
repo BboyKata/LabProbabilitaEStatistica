@@ -1,0 +1,14 @@
+clear;
+n = 1e4;
+E = [2,3];
+nE = zeros(1,n);
+res = randi([1,6],1,n);
+for i = 1:n
+    nE(i) = sum(E == res(i));
+end
+PE = cumsum(nE) ./ (1:n)';
+figure(1);
+outcomes = 40;
+plot(nE(0,outcomes))
+
+
